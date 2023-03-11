@@ -14,13 +14,12 @@ export interface Options {
 const loadDictionaries = (pathes: string[]): string[] => {
     const terms: string[] = [];
     pathes.forEach(path => {
-        console.log(path);
         if (!fs.existsSync(path)) return;
         try {
             const content = fs.readFileSync(path, { encoding: "utf8"});
             if (content) {
                 content.split("\n").forEach(line => {
-                    if (line.match(/^\#/)) return;
+                    if (line.match(/^\#/) || line === "") return;
                     terms.push(line);
                 })
             } 
@@ -28,14 +27,16 @@ const loadDictionaries = (pathes: string[]): string[] => {
             console.error(err);
         }
     });
-    return terms;
+    return [...new Set(terms.sort())];
 }
 
 const report: TextlintRuleModule<Options> = (context, options = {}) => {
     const { Syntax, RuleError, report, getSource, locator } = context;
     const allows = options.allows ?? [];
     const dictFiles: string[] = [
-        path.join(__dirname, "..", "dict", "dic.txt")
+        path.join(__dirname, "..", "dict", "common.txt"),
+        path.join(__dirname, "..", "dict", "hatena.txt"),
+        path.join(__dirname, "..", "dict", "aws.txt")
     ];
     const userDics = options.dic ?? [];
     userDics.forEach(file => {
@@ -62,7 +63,7 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
                             const index = (token.word_position - 1) ?? 0;
                             const matchRange = [index, index + token.surface_form.length] as const;
 
-                            const ruleError = new RuleError(`名称 ${token.surface_form} -> ${candidate}`, {
+                            const ruleError = new RuleError(`Name: ${token.surface_form} -> ${candidate}`, {
                                 padding: locator.range(matchRange)
                             });
                             results.push(ruleError);

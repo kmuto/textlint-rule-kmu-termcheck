@@ -1,6 +1,6 @@
 # @kmuto/textlint-rule-kmu-termcheck
 
-service name checker for textlint
+textlint rules to detect typos, such as service names.
 
 ## Install
 
@@ -26,6 +26,11 @@ Via CLI
 textlint --rule @kmuto/kmu-termcheck README.md
 ```
 
+You can specify some options.
+
+- `allows: ["key1", "key2", ...]`: Specify words that are allowed even if they are recognized as errors.
+- `dic: ["file1", "file2", ...]`: Specify additional dictionary files. The dictionary file consists of one line per word, separated by newlines, and lines beginning with `#` are ignored. It is not possible to specify terms containing spaces (use prh rule or other).
+
 ### Build
 
 Builds source codes for publish to the `lib` folder.
@@ -42,4 +47,26 @@ Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tes
 
 ## License
 
-MIT © Kenshi Muto
+```
+MIT License
+
+Copyright (c) 2023 Kenshi Muto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
