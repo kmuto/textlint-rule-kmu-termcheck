@@ -415,3 +415,7 @@ ZooKeeper
 Ruby
 Perl
 Emacs
+development
+developer
+explorer
+pipeline

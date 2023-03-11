@@ -288,5 +288,363 @@ Balancing
 FreeRTOS
 Evaluator
 OpenShift
-Saving
-Plans
+Saving Plans
+AWS IoT Core
+AWS IoT FleetWise
+AWS IoT SiteWise
+AWS IoT TwinMaker
+AWS IoT Greengrass
+IoT Core
+IoT FleetWise
+IoT SiteWise
+IoT TwinMaker
+IoT Greengrass
+AWS Cloud WAN
+Cloud WAN
+AWS Local Zones
+Local Zones
+AWS Verified Access
+Verified Access
+Amazon OpenSearch Service
+OpenSearch Service
+Alexa for Business
+Amazon API Gateway
+API Gateway
+Amazon AppFlow
+Amazon AppStream
+Amazon Athena
+Amazon Augmented AI
+Augmented AI
+Amazon Aurora
+Amazon Braket
+Amazon Chime
+Amazon Chime SDK
+Amazon CloudFront
+Amazon CloudSearch
+Amazon CloudWatch
+Amazon CodeCatalyst
+Amazon CodeGuru
+Amazon Cognito
+Amazon Comprehend
+Amazon Connect
+Amazon Corretto
+Amazon DataZone
+Amazon Detective
+Amazon DevOps Guru
+Amazon DocumentDB
+Amazon DynamoDB
+# Amazon EC2
+# 2がダメ
+# Amazon EC2 Auto Scaling
+Auto Scaling
+Amazon Elastic Block Store
+Elastic Block Store
+Amazon Elastic Container Registry
+Elastic Container Registry
+Amazon Elastic Container Service
+Elastic Container Service
+Amazon Elastic File System
+Elastic File System
+Amazon Elastic Inference
+Elastic Inference
+Amazon Elastic Kubernetes Service
+Elastic Kubernetes Service
+Amazon Elastic Transcoder
+Elastic Transcoder
+Amazon ElastiCache
+Amazon EMR
+Amazon EventBridge
+Amazon FinSpace
+Amazon Forecast
+Amazon Fraud Detector
+Fraud Detector
+Amazon FSx
+AmazonGameLift
+Amazon GuardDuty
+Amazon HealthLake
+Amazon Honeycode
+Amazon Inspector
+Amazon Interactive Video Service
+Interactive Video Service
+Amazon Kendra
+Amazon Kyespaces
+Apache Cassandra
+Amazon Kinesis
+Amazon Kinesis Video Streams
+Kinesis Video Streams
+Amazon Lex
+Amazon Lightsail
+Amazon Location Service
+Location Service
+Amazon Lookout for Equipment
+Lookout for Equipment
+Amazon Lookout for Metrics
+Lookout for Metrics
+Amazon Lookout for Vision
+Lookout for Vision
+Amazon Lumberyard
+Amazon Macie
+Amazon Managed Blockchain
+Managed Blockchain
+Amazon Managed Grafana
+Managed Grafana
+Amazon Managed Service for Prometheus
+Managed Service for Prometheus
+Amazon Managed Streaming for Apache Kafka
+Managed Streaming for Apache Kafka
+Apache Kafka
+Amazon Managed Workflows for Apache Airflow
+Managed Workflows for Apache Airflow
+Apache Airflow
+Amazon MemoryDB for Redis
+MemoryDB for Redis
+Amazon Monitron
+Amazon MQ
+Amazon Neptune
+Amazon Nimble Studio
+Nimble Studio
+Amazon Omics
+Amazon Personalize
+Amazon Pinpoint
+Amazon Polly
+Amazon Quantum Ledger Database
+Quantum Ledger Database
+Amazon QuickSight
+Amazon RDS
+Amazon RDS on VMware
+Amazon Redshift
+Amazon Rekognition
+# Amazon Route 53
+Amazon Route
+# Amazon S3 Glacier
+Amazon SageMaker
+Amazon SageMaker Ground Truth
+SageMaker Ground Truth
+Amazon Security Lake
+Security Lake
+Amazon Simple Email Service
+Simple Email Service
+Amazon Simple Notification Service
+Simple Notification Service
+Amazon Simple Queue Service
+Simple Queue Service
+Amazon Simple Storage Service
+Amazon Sumerian
+Amazon Textract
+Amazon Timestream
+Amazon Transcribe
+Amazon Translate
+Amazon Verified Permissions
+Verified Permissions
+Amazon VPC
+Amazon WorkDocs
+Amazon WorkLink
+Amazon WorkMail
+Amazon Workspaces
+Apache MXNet on AWS
+MXNet on AWS
+AWS Application Migration Service
+Application Migration Service
+AWS Amplify
+AWS App Mesh
+App Mesh
+AWS App Runner
+App Runner
+# AWS App2Container
+AWS Application Composer
+Application Composer
+AWS Application Discovery Service
+Application Discovery Service
+AWS AppSync
+AWS Artifact
+AWS Audit Manager
+AWS Auto Scaling
+AWS Backup
+AWS Batch
+AWS Budgets
+AWS Certificate Manager
+Certificate Manager
+AWS Chatbot
+AWS Clean Rooms
+Clean Rooms
+AWS Cloud Control API
+Cloud Control API
+AWS Cloud Development Kit
+Cloud Development Kit
+AWS Cloud Map
+Cloud Map
+# AWS Cloud9
+AWS CloudFormation
+AWS CloudHSM
+AWS CloudShell
+AWS CloudTrail
+AWS CodeArtifact
+AWS CodeBuild
+AWS CodeCommit
+AWS CodeDeploy
+AWS CodePipeline
+AWS CodeStar
+AWS Compute Optimizer
+Compute Optimizer
+AWS Config
+AWS Console Mobile Application
+Console Mobile Application
+AWS Control Tower
+Control Tower
+AWS Copilot
+AWS Cost and Usage Report
+Cost and Usage Report
+AWS Cost Explorer
+Cost Explorer
+AWS Data Exchange
+Data Exchange
+AWS Data Pipeline
+Data Pipeline
+AWS Database Migration Service
+Database Migration Service
+AWS DataSync
+AWS Deep Learning Containers
+Deep Learning Containers
+AWS DeepComposer
+AWS DeepLens
+AWS DeepRacer
+AWS Device Farm
+Device Farm
+AWS Direct Connect
+Direct Connect
+AWS Directory Service
+Directory Service
+AWS Distro for OpenTelemetry
+Distro for OpenTelemetry
+AWS Elastic Beanstalk
+Elastic Beanstalk
+AWS Elemental MediaConnect
+Elemental MediaConnect
+AWS Elemental MediaConvert
+Elemental MediaConvert
+AWS Elemental MediaLive
+Elemental MediaLive
+AWS Elemental MediaPackage
+Elemental MediaPackage
+AWS Elemental MediaStore
+Elemental MediaStore
+AWS Elemental MediaTailor
+Elemental MediaTailor
+AWS Fargate
+AWS Fault Injection Simulator
+Fault Injection Simulator
+AWS Firewall Manager
+Firewall Manager
+AWS Global Acelerator
+Global Acelerator
+AWS Glue
+AWS Ground Station
+Ground Station
+AWS Identity and Access Management
+Identity and Access Management
+AWS Inferentia
+# AWS IoT 1-Click
+AWS IoT Analytics
+IoT Analytics
+AWS IoT Device Defender
+IoT Device Defender
+Device Defender
+AWS IoT Device Management
+IoT Device Management
+Device Management
+AWS IoT EduKit
+IoT EduKit
+AWS IoT Events
+IoT Events
+AWS IoT RoboRunner
+IoT RoboRunner
+AWS IoT Things Graph
+IoT Things Graph
+Things Graph
+AWS Key Management Service
+Key Management Service
+AWS Lake Formation
+Lake Formation
+AWS Lambda
+AWS Launch Wizard
+Launch Wizard
+AWS License Manager
+License Manager
+AWS Mainframe Modernization
+Mainframe Modernization
+AWS Migration Hub
+Migration Hub
+AWS Network Firewall
+Network Firewall
+AWS OpsWorks
+AWS Organizations
+AWS Outposts
+AWS Panorama
+AWS Partner Device Catalog
+Partner Device Catalog
+AWS Personal Health Dashboard
+Personal Health Dashboard
+# AWS Private 5G
+AWS Private
+AWS PrivateLink
+AWS Proton
+AWS Resilience Hub
+Resilience Hub
+AWS Resource Access Manager
+Resource Access Manager
+AWS RoboMaker
+AWS Secrets Manager
+Secrets Manager
+AWS Security Hub
+Security Hub
+AWS Server Migraiton Service
+Server Migraiton Service
+AWS Serverless Application Repository
+Serverless Application Repository
+AWS Service Catalog
+Service Catalog
+AWS Service Management Connector
+Service Management Connector
+AWS Shield
+AWS SimSpace Weaver
+# AWS Single Sign-On
+AWS Single Sign
+AWS Snow
+AWS Step Functions
+Step Functions
+AWS Storage Gateway
+Storage Gateway
+AWS Supply Chain
+Supply Chain
+AWS Systems Manager
+Systems Manager
+AWS Transfer Family
+Transfer Family
+AWS Transit Gateway
+Transit Gateway
+AWS Trusted Advisor
+Trusted Advisor
+AWS VPN
+AWS WAF
+AWS Wavelength
+# AWS Well-Architected Tool
+AWS Well
+Architected Tool
+AWS Wickr
+# AWS X-Ray
+AWS X
+AWS Command Line Interface
+Command Line Interface
+AWS Managed Services
+AWS Elastic Disaster Recovery
+Elastic Disaster Recovery
+Elastic Load balancing
+Migration Evaluator
+PyTorch on AWS
+Red Hat
+Red hat OpenShift Service on AWS
+Red hat OpenShift Service
+Saving Plans
+TensorFlow on AWS
+VMware Cloud on AWS
+VMware Cloud
