@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "keywords": [
+    "textlintrule"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/",
+    "dict/"
+  ],
+  "scripts": {
+    "test": "cross-env NO_INLINE=1 textlint-scripts test",
+    "build": "cross-env NO_INLINE=1 textlint-scripts build",
+    "prepublish": "npm run --if-present build",
+    "watch": "cross-env NO_INLINE=1 textlint-scripts build --watch"
+  },
+  "devDependencies": {
+    "@textlint/types": "^13.3.1",
+    "@types/didyoumean": "^1.2.0",
+    "@types/node": "^18.14.6",
+    "cross-env": "^7.0.3",
+    "textlint-scripts": "^13.3.1",
+    "textlint-tester": "^13.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "name": "@kmuto/textlint-rule-kmu-termcheck",
+  "description": "service name checker for textlint",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmuto/textlint-rule-kmu-termcheck.git"
+  },
+  "author": "Kenshi Muto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmuto/textlint-rule-kmu-termcheck/issues"
+  },
+  "homepage": "https://github.com/kmuto/textlint-rule-kmu-termcheck#readme",
+  "dependencies": {
+    "didyoumean": "^1.2.2",
+    "kuromojin": "^3.0.0"
+  }
+}
