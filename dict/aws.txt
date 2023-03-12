@@ -5,7 +5,6 @@ FleetWise
 SiteWise
 TwinMaker
 Greengrass
-Opensearch
 Alexa
 AppFlow
 AppStream
@@ -234,6 +233,11 @@ Amazon Kendra
 Amazon Kyespaces
 Apache Cassandra
 Amazon Kinesis
+Amazon Kinesis Agent
+Amazon Kinesis Data Firehose
+Kinesis Data Firehose
+Data Firehose
+Firehose
 Amazon Kinesis Video Streams
 Kinesis Video Streams
 Amazon Lex

@@ -317,3 +317,15 @@ design
 chainer
 textlint
 platform
+transformer
+built
+build
+magazine
+tunnel
+severity
+npm
+rpm
+deb
+gem
+RubyGems
+Web

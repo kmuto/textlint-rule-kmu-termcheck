@@ -2,6 +2,8 @@
 
 textlint rules to detect typos, such as service names.
 
+[README in Japanese](README_ja.md) for details.
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
@@ -28,7 +30,7 @@ textlint --rule @kmuto/kmu-termcheck README.md
 
 You can specify some options.
 
-- `allows: ["key1", "key2", ...]`: Specify words that are allowed even if they are recognized as errors.
+- `allows: ["word1", "word2", ...]`: Specify words that are allowed even if they are recognized as errors.
 - `userDic: ["file1", "file2", ...]`: Specify additional dictionary files. The dictionary file consists of one line per word, separated by newlines, and lines beginning with `#` are ignored.
 - `commonDic: true|false`: Control common dictionary loading. (default: true)
 - `hatenaDic: true|false`: Control hatena dictionary loading. (default: true)
