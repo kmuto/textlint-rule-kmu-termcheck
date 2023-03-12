@@ -2,6 +2,8 @@
 
 英語アルファベットで記述されている製品名やサービス名などの表記ミスをチェックするためのtextlintルールです。
 
+![Visual Studio Codeでの動作例](./images/textlint-vscode.png)
+
 ## インストール
 
 [npm](https://www.npmjs.com/)でインストールできます。
