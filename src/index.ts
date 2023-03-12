@@ -4,24 +4,29 @@ import { tokenize } from "kuromojin";
 import path from "path";
 import fs from "fs";
 
+// FIXME: how I can avoid URL including small letters?
+const implicitOK = ["Amazon EC2", "github"];
+
 const defaultOptions = {
     allows: [],
     userDic: [],
     commonDic: true,
     hatenaDic: true,
     awsDic: true,
-    compoundMode: true
+    compoundMode: true,
+    ignoreFirstCapital: true
 }
 export interface Options {
-    // If token match allowed text exactly, does not report.
+    // If a token matches allowed text exactly, don't report.
     allows?: string[];
     // user's dictionary path
     userDic?: string[];
-    // system dic
+    // system dics
     commonDic?: boolean;
     hatenaDic?: boolean;
     awsDic?: boolean;
     compoundMode?: boolean;
+    ignoreFirstCapital?: boolean;
 }
 
 const loadDictionaries = (pathes: string[]): string[] => {
@@ -32,10 +37,10 @@ const loadDictionaries = (pathes: string[]): string[] => {
             const content = fs.readFileSync(path, { encoding: "utf8"});
             if (content) {
                 content.split("\n").forEach(line => {
-                    if (line.match(/^\#/) || line === "") return;
+                    if (line.startsWith("#") || line === "") return;
                     terms.push(line.replace(/ /g, "÷")); // replace space with ÷, \xf7. This character will be treated as English alphabet, nice!
                 })
-            } 
+            }
         } catch(err) {
             console.error(err);
         }
@@ -50,11 +55,22 @@ const resultTF = (optionVal: boolean | undefined, defaultVal: boolean): boolean 
     return optionVal;
 };
 
+const firstLower = (s: string): string => {
+    return s.charAt(0).toLowerCase() + s.slice(1);
+}
+
+const isTypo = (candidate: string | string[], tokenform: string, ignoreFirstCapital: boolean): boolean => {
+    if (!candidate) return false;
+    const candidateString = candidate.toString();
+    if (candidateString === tokenform) return false;
+    if (ignoreFirstCapital && (firstLower(candidateString) === firstLower(tokenform))) return false;
+    return true;
+};
+
 const report: TextlintRuleModule<Options> = (context, options = {}) => {
     const { Syntax, RuleError, report, getSource, locator } = context;
-    // add EC2 to avoid misrecognized
     const allows = (options.allows ?? defaultOptions.allows).
-        concat(["Amazon EC2"]).
+        concat(implicitOK).
         map(w => w.replace(/ /g, "÷"));
     const dictFiles: string[] = [];
     if (resultTF(options.commonDic, defaultOptions.commonDic)) dictFiles.push(path.join(__dirname, "..", "dict", "common.txt"));
@@ -65,6 +81,7 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
         dictFiles.push(file);
     });
     const termDictionary = loadDictionaries(dictFiles);
+    const ignoreFirstCapital = options.ignoreFirstCapital ?? defaultOptions.ignoreFirstCapital;
 
     // FIXME: refactoring, refactoring, refactoring.
     return {
@@ -80,10 +97,12 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
 
             return tokenize(text).then(tokens => {
                 tokens.forEach(token => {
+                    // \x7f is ÷
                     if (token.surface_form.match(/^[\x21-\x7e\xf7]+$/) && !allows.includes(token.surface_form)) {
                         // check ascii term only
                         const candidate = didYouMean(token.surface_form, termDictionary);
-                        if (candidate && candidate !== token.surface_form) {
+                        // FIXME: candidate may return string[]
+                        if (isTypo(candidate, token.surface_form, ignoreFirstCapital)) {
                             const index = (token.word_position - 1) ?? 0;
                             const matchRange = [index, index + token.surface_form.length] as const;
 
@@ -95,8 +114,8 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
                             // split and try checking also
                             token.surface_form.split("÷").forEach(subtoken => {
                                 const subcandidate = didYouMean(subtoken, termDictionary);
-                                if (subcandidate && subcandidate !== subtoken) {
-                                    // FIXME: index
+                                if (isTypo(subcandidate, subtoken, ignoreFirstCapital)) {
+                                    // FIXME: index is not correct
                                     const index = (token.word_position - 1) ?? 0;
                                     const matchRange = [index, index + token.surface_form.length] as const;
                                     const ruleError = new RuleError(`Name: ${subtoken.replace(/÷/g, " ")} -> ${subcandidate.toString().replace(/÷/g, " ")}`, {

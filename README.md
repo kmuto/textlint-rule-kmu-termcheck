@@ -30,10 +30,11 @@ You can specify some options.
 
 - `allows: ["key1", "key2", ...]`: Specify words that are allowed even if they are recognized as errors.
 - `userDic: ["file1", "file2", ...]`: Specify additional dictionary files. The dictionary file consists of one line per word, separated by newlines, and lines beginning with `#` are ignored.
-- `commonDic: true|false`: Control common dictionary loading.
-- `hatenaDic: true|false`: Control hatena dictionary loading.
-- `awsDic: true|false`: Control aws dictionary loading.
-- `compoundMode: true|false`: Control word compound mode.
+- `commonDic: true|false`: Control common dictionary loading. (default: true)
+- `hatenaDic: true|false`: Control hatena dictionary loading. (default: true)
+- `awsDic: true|false`: Control aws dictionary loading. (default: true)
+- `compoundMode: true|false`: Control word compound mode. (default: true)
+- `ignoreFirstCapital: true|false`: Control of ignoring leading capitalization. (default: true)
 
 ### Build
 
