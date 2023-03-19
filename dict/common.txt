@@ -329,3 +329,24 @@ deb
 gem
 RubyGems
 Web
+default
+Open Source Software
+Eclipse
+PowerShell
+healthcare
+natural
+language
+deployment
+manager
+foundation
+appliance
+intelligence
+security
+confidential
+certificated
+authority
+certification
+authorize
+authorization
+authorized
+ransomware

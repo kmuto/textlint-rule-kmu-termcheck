@@ -35,6 +35,7 @@ You can specify some options.
 - `commonDic: true|false`: Control common dictionary loading. (default: true)
 - `hatenaDic: true|false`: Control hatena dictionary loading. (default: true)
 - `awsDic: true|false`: Control aws dictionary loading. (default: true)
+- `googlecloudDic: true|false`: Control googlecloud dictionary loading. (default: true)
 - `compoundMode: true|false`: Control word compound mode. (default: true)
 - `ignoreFirstCapital: true|false`: Control of ignoring leading capitalization. (default: true)
 

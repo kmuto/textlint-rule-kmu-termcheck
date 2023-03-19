@@ -39,6 +39,7 @@ textlint --rule @kmuto/kmu-termcheck README.md
 - `commonDic: true|false`: 一般技術辞書の有効/無効設定です（デフォルトはtrue）。
 - `hatenaDic: true|false`: はてな社のごく一部の技術についての辞書の有効/無効設定です（デフォルトはtrue）。
 - `awsDic: true|false`: Amazon Web Servicesの技術についての辞書の有効/無効設定です（デフォルトはtrue）。
+- `googlecloudDic: true|false`: Google Cloudの技術についての辞書の有効/無効設定です（デフォルトはtrue）。
 - `compoundMode: true|false`: 文中でスペースで区切られた語句を、1つのかたまりの語句として扱うモードにする有効/無効設定です（デフォルトはtrue）。
 - `ignoreFirstCapital: true|false`: 語句の先頭の大文字/小文字の差異を無視するモードの有効/無効設定です（デフォルトはtrue）。
 
@@ -56,6 +57,7 @@ textlint --rule @kmuto/kmu-termcheck README.md
             "commonDic": true,
             "hatenaDic": true,
             "awsDic": true,
+            "googleDic": true,
             "compoundMode": true,
             "ignoreFirstCapital": true,
             "severity": "warning"

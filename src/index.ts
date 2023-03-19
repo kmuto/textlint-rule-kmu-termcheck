@@ -13,6 +13,7 @@ const defaultOptions = {
     commonDic: true,
     hatenaDic: true,
     awsDic: true,
+    googlecloudDic: true,
     compoundMode: true,
     ignoreFirstCapital: true
 }
@@ -25,6 +26,7 @@ export interface Options {
     commonDic?: boolean;
     hatenaDic?: boolean;
     awsDic?: boolean;
+    googlecloudDic?: boolean;
     compoundMode?: boolean;
     ignoreFirstCapital?: boolean;
 }
@@ -76,6 +78,7 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
     if (resultTF(options.commonDic, defaultOptions.commonDic)) dictFiles.push(path.join(__dirname, "..", "dict", "common.txt"));
     if (resultTF(options.hatenaDic, defaultOptions.hatenaDic)) dictFiles.push(path.join(__dirname, "..", "dict", "hatena.txt"));
     if (resultTF(options.awsDic, defaultOptions.awsDic)) dictFiles.push(path.join(__dirname, "..", "dict", "aws.txt"));
+    if (resultTF(options.googlecloudDic, defaultOptions.googlecloudDic)) dictFiles.push(path.join(__dirname, "..", "dict", "googlecloud.txt"));
     const userDics = options.userDic ?? [];
     userDics.forEach(file => {
         dictFiles.push(file);
@@ -88,7 +91,7 @@ const report: TextlintRuleModule<Options> = (context, options = {}) => {
         [Syntax.Str](node) { // "Str" node
             const _text = getSource(node); // Get text
             const text = resultTF(options.compoundMode, defaultOptions.compoundMode) ? _text.replace(/([a-z]) ([a-z])/gi, "$1÷$2") : _text;
-  
+
             if (allows.some(allow => text.includes(allow))) {
                 return;
             }

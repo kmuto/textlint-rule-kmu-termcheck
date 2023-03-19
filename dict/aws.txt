@@ -76,7 +76,6 @@ Rekognition
 Glacier
 SageMaker
 Truth
-Security
 Sumerian
 Textract
 Timestream
