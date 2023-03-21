@@ -52,15 +52,15 @@ textlint --rule @kmuto/kmu-termcheck README.md
 {
     "rules": {
         "@kmuto/kmu-termcheck": {
-            "allows": ["mattena"],
-            "userDic": ["strong-dictionary.txt"],
-            "commonDic": true,
-            "hatenaDic": true,
-            "awsDic": true,
-            "googleDic": true,
-            "compoundMode": true,
-            "ignoreFirstCapital": true,
-            "severity": "warning"
+            allows: ["mattena"],
+            userDic: ["strong-dictionary.txt"],
+            commonDic: true,
+            hatenaDic: true,
+            awsDic: true,
+            googleDic: true,
+            compoundMode: true,
+            ignoreFirstCapital: true,
+            severity: "warning"
         }
     }
 }
